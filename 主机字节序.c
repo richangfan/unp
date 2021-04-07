@@ -1,7 +1,3 @@
-/**
- * 查看主机字节序
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 

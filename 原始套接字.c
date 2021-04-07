@@ -1,7 +1,3 @@
-/**
- * 原始套接字
- */
-
 #include <stdio.h>
 #include <sys/socket.h>
 #include <netinet/in.h>

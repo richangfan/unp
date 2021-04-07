@@ -1,7 +1,3 @@
-/**
- * 字节操作函数
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
