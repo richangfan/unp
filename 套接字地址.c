@@ -51,16 +51,14 @@ int main(int argc, char *argv[])
     memset(&sa4, 0, sizeof(sa4));
     sa4.sin_family = AF_INET;
     sa4.sin_port = htons(4444);
-    error = inet_pton(AF_INET, "127.0.0.1", &sa4.sin_addr);
-    if (error < 1)
+    if (inet_pton(AF_INET, "127.0.0.1", &sa4.sin_addr) != 1)
         printf("转换IPv4地址失败\n"), exit(1);
     printsockaddr((struct sockaddr *)&sa4);
 
     memset(&sa6, 0, sizeof(sa6));
     sa6.sin6_family = AF_INET6;
     sa6.sin6_port = htons(6666);
-    error = inet_pton(AF_INET6, "0:0:0:0:0:0:0:1", &sa6.sin6_addr);
-    if (error < 1)
+    if (inet_pton(AF_INET6, "0:0:0:0:0:0:0:1", &sa6.sin6_addr) != 1)
         printf("转换IPv6地址失败\n"), exit(1);
     printsockaddr((struct sockaddr *)&sa6);
 
